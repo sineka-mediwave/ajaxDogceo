@@ -9,16 +9,23 @@
     
   </head>
   <body>
-    <h1>DOG API PROJECT</h1>
-    <label for="dogBreed">Choose your Dog: </label>
-    <select name="dogBreed" id="dogBreed">
-      <option selected disabled>dog breeds</option>
-    </select>
-    <button>Fetch dog image</button>
-    <img
+    <div id = "loading-indicator"></div>
+    <div class="selectionDiv">
+      <h1>DOG API PROJECT</h1>
+      <label for="dogBreed">Choose your Dog: </label>
+      <select name="dogBreed" id="dogBreed">
+        <option selected disabled>dog breeds</option>
+      </select>
+      <button id="imageBtn">Fetch dog image</button>
+    </div>
+    
+    <div>
+      <img
       src="https://images.dog.ceo/breeds/akita/An_Akita_Inu_resting.jpg"
       alt="dog image with different breed"
-    />
+      />
+    </div>
+    
     <script src=script.js></script>
   </body>
 </html>

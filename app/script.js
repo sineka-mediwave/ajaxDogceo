@@ -1,11 +1,20 @@
+getAllDogsFromApi();
+
+document.onreadystatechange = function () {
+  if (document.readyState !== "complete") {
+    // show loading indicator and hide body
+  } else {
+    // show body, and hide loading indicator
+  }
+};
 function getAllDogsFromApi() {
   // https://dog.ceo/api/breeds/list/all
-  const url = "https://dog.ceo/api/breedsss/list/all";
+  const url = "https://dog.ceo/api/breeds/list/all";
   $.ajax(url, {
     method: "GET",
     success: function (resp) {
       console.log("Api request success");
-      console.log(resp);
+      console.log(Object.keys(resp.message));
     },
     error: function () {
       console.log("Api request error");
