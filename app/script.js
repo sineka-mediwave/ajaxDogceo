@@ -5,7 +5,6 @@ jQuery.ajaxSetup({
   complete: function () {
     $("#loading-indicator").text("");
   },
-  success: function () {},
 });
 
 function getAllDogsFromApi() {
@@ -22,9 +21,6 @@ function getAllDogsFromApi() {
     error: function () {
       console.log("Api request error");
     },
-    // complete: function () {
-    //   console.log("API request completed");
-    // },
   });
 }
 
@@ -41,9 +37,6 @@ function getRandomImageOfDog(dogBreed) {
     error: function () {
       console.log("Api request error");
     },
-    // complete: function () {
-    //   console.log("API request completed");
-    // },
   });
 }
 
@@ -60,14 +53,16 @@ function addOption(selectDog) {
 </option>`);
   }
 }
+function fetchDogImage() {
+  $("#imageBtn").click(function () {
+    const selectedDog = $("#selectDogBreed").val();
+    console.log(selectedDog);
 
-$("#imageBtn").click(function () {
-  const selectedDog = $("#selectDogBreed").val();
-  console.log(selectedDog);
-
-  getRandomImageOfDog(selectedDog);
-});
+    getRandomImageOfDog(selectedDog);
+  });
+}
 
 $(document).ready(function () {
   getAllDogsFromApi();
+  fetchDogImage();
 });

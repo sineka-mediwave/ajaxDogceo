@@ -22,12 +22,12 @@ select{
 }
 
 #loading-indicator{
-    height: 70px;
+    height: 60px;
   text-align: center;
-  font-size: 48px;
+  font-size: 38px;
 }
 .selectionDiv {
-    margin-bottom: 20px;
+
     padding: 20px;
     text-align: center;
     background-color: #8EACCD;
@@ -43,13 +43,19 @@ select{
   outline: none;
 }
 
-#imageDiv img {
+#imageDiv{
     margin: 0 auto;
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    left: 0;
-    right: 0;
-  
-    border-radius: 10px;
+    width: 680px;
+    height:680px;
+    
   }
+#imageDiv img {
+    border-radius: 10px;
+}
+
+@media (max-width: 480px) {
+    #imageDiv{
+      width: 310px;
+      height: 310px;
+    }
+}
