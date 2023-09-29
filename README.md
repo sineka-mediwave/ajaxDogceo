@@ -6,6 +6,8 @@
 
 ```
 
+While fetching data from the api, the page have to load (like loading....). Then droplist for choose the dog breed. while click the button, the dog image will be loaded form the api.
+
 ## Dropdown list usng jQuery
 
 calling function inside the api succes
@@ -15,6 +17,8 @@ calling function inside the api succes
       console.log(selectDog);
       addOption(selectDog);
 ```
+
+From api while getting the list of all breeds name, append them to the option category.
 
 ```
 function addOption(selectDog) {
